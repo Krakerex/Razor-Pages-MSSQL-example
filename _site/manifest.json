@@ -1,0 +1,273 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/ipkrzbli/source/repos/19705_Zadanie_C#",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Database.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Database.html",
+          "hash": "IfzgTknIjpBYh+CqJDUTTI4cW4hrZ+PSh4oo/XbVjq8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Models.Adres.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Models.Adres.html",
+          "hash": "8kxXXkXE2eDfqtMEQFNOVCY2b6E6f8RgyxUi+yKme7w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Models.Dane.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Models.Dane.html",
+          "hash": "Jxl54nUOLxQh+NsHHwwWBAvBZloPmLd1REIJkLt+K4g="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Models.Pracownik.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Models.Pracownik.html",
+          "hash": "ZnQ82IyoOFRwWhw/xB0xZl2Yws9WqS91GYmA9piOjHM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Models.html",
+          "hash": "G071O6uxharoGEGbKOnKxJQB3xiJ7Ly++l4kWEzPBTo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Pages.AdminModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Pages.AdminModel.html",
+          "hash": "PxHBRZfoW5C+cz5mXvA4ZhYgU9ayHryxc1ebKLP6KoU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Pages.AdresModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Pages.AdresModel.html",
+          "hash": "rdtYTTZEGARr2Cc0pgfQqiirw0MtzKEQNAdoprTs7C4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Pages.DaneModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Pages.DaneModel.html",
+          "hash": "7hmAXNufwF83T4w0ez+jeSquM4wwcgWXEa2GXmPuVkU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Pages.ErrorModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Pages.ErrorModel.html",
+          "hash": "g2TgUP088TFUO9A4GvgJYV5q+HU8Ev3Cw7By8LESKLw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Pages.LoginModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Pages.LoginModel.html",
+          "hash": "BejtquJc1qrRTtMeNg0UfUZSxmItC95UoPMLiICjXPU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Pages.PracownikModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Pages.PracownikModel.html",
+          "hash": "3BxZDarpaQ4aA7Vs67z3gg2p3GkVbGWKHzkHivmOiTk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Pages.PrivacyModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Pages.PrivacyModel.html",
+          "hash": "zpmxOtIkjfaz5+Fjxb/sq1aHHJgw6sZvkcqms152/Go="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Pages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Pages.html",
+          "hash": "lHQxPnAvYUggCRoVkxa/o8MqLRI6tbgKtj56m3/HpdQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.Użytkownik.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.Użytkownik.html",
+          "hash": "8EpkxxtCV09VeTROpEmOU4SdnEjrqJIq1sQP+kunqHE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/_19705_Zadanie_C_.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/_19705_Zadanie_C_.html",
+          "hash": "k1D43kA4gp8nw+/k4av1JS7CNKXq8gA2aREF174nYsQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "ZjsYw09+jSnn9PKWo96Ru4N2HxdRolfbZeqBEhpmZ9w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "+KjO7ctwz3GLxQMk3xckTp+ES0LiWMJ3JTOQaQQzlyY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "tKr04XIO/zMeEkb4E9HbKWZU+4aCrNzPe+CXgk+rJ6Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 1
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 15,
+          "skipped_file_count": 10
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
