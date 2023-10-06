@@ -1,0 +1,103 @@
+﻿@page
+@model AdminModel
+@{
+    ViewData["Title"] = "Admin";
+}
+<head>
+    <style>
+        table, td, tr {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        @if (HttpContext.Session.GetString("username") != null)
+        {
+            var adres = (Models.Adres)ViewData["Adres"];
+            int i = 0;
+            int j = 0;
+            int index;
+            <table border="1px" style="border-style:solid">
+                <tr>
+                    @foreach (var propertyInfo in adres.GetType().GetProperties())
+                    {
+
+                        <td>
+                            @propertyInfo.Name
+                        </td>
+
+
+                    }
+                </tr>
+
+                @foreach (var obj in Model.adresy)
+                {
+                    <form method="post">
+                        @{
+                            j = j + 10;
+                            i = 0;
+                        }
+
+                    <tr>
+                            @foreach (var propertyInfo in obj.GetType().GetProperties())
+                            {
+                            <td>
+                                    @{
+
+                                        index = i + j;
+                                    }
+
+                                <input name=@index type="text" value=@propertyInfo.GetValue(obj)>
+                            </td>
+                                i++;
+                            }
+                        <td>
+                            <button formmethod="post" asp-page-handler="Edit">Zapisz zmiany</button>
+                            <input type="hidden" name="id" value=@j />
+
+                        </td>
+                        <td>
+                            <button formmethod="post" asp-page-handler="Delete">Usuń rekord</button>
+                            <input type="hidden" name="id" value=@j />
+                        </td>
+
+                    </tr>
+
+                    </form>
+                }
+                <form method="post">
+                <tr>
+                        @{
+                            j = j + 10;
+                            index =j;}
+                    <td>
+                        <input name=@index type="text" disabled value=>
+                    </td>
+                        @for (i = 1; i < 8; i++)
+                        {
+                            index = i + j;
+                        <td>
+                            <input name=@index type="text" value=>
+                        </td>
+                        }
+                    <td colspan="2">
+                        <button formmethod="post" asp-page-handler="Add">Dodaj rekord</button>
+                        <input type="hidden" name="id" value=@j />
+                    </td>
+
+                    
+
+                </tr>
+                </form>
+
+
+
+
+            </table>
+
+        }
+        @ViewData["idw"]
+    </div>
+</body>
+

@@ -1,0 +1,45 @@
+﻿@page
+@model DaneModel
+@{
+    ViewData["Title"] = "Dane";
+}
+<head>
+    <style>
+        table,td,tr{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+    @if (HttpContext.Session.GetString("username") != null)
+    {
+        var dane = (Models.Dane)ViewData["Dane"];
+            int i = 0;
+            <form method="post">
+            <table border="1px" style="border-style:solid">
+        @foreach (var propertyInfo in dane.GetType().GetProperties())
+        {
+            
+                <tr>
+                    <td>
+                        @propertyInfo.Name
+                    </td>
+                    <td>
+                        <input name=@i type="text" value=@propertyInfo.GetValue(dane) >
+                    </td>
+                    <td>
+                             
+                    </td>
+                </tr border="1px" style="border-style:solid">
+                
+                i++;
+        }
+        </table>
+        <button formmethod="post" asp-page-handler="Edit">Zapisz zmiany</button>
+        </form>
+    }
+    @ViewData["idw"]
+</div>
+</body>
+

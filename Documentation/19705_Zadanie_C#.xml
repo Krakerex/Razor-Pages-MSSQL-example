@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>19705_Zadanie_C#</name>
+    </assembly>
+    <members>
+        <member name="T:_19705_Zadanie_C_.Database">
+            <summary>
+             Zawiera metody odpowiedzialne za komunikację z bazą danych, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+        </member>
+        <member name="F:_19705_Zadanie_C_.Database.connectionString">
+            <summary>
+            Zawiera connection string dla używanej bazy danych
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.getUser">
+            <summary>
+            Służy do pobierania danych użytkownika, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <returns>Zwraca <see cref="T:System.Data.SqlClient.SqlDataReader"/> zawierający dane z tabeli Pracownik użytkownika o ID <see cref="F:_19705_Zadanie_C_.Użytkownik.userID"/></returns>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.getAdres">
+            <summary>
+            Służy do pobierania danych zalogowanego użytkownika z tabeli Adres, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <returns>Zwraca <see cref="T:System.Data.SqlClient.SqlDataReader"/> zawierający dane z tabeli Adres zalogowanego użytkownika</returns>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.getAdresy">
+            <summary>
+            Służy do pobierania danych użytkowników z tabeli Adres, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <returns>Zwraca <see cref="T:System.Data.SqlClient.SqlDataReader"/> zawierający wszystkie dane z tabeli Pracownik</returns>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.getDane">
+            <summary>
+            Służy do pobierania danych użytkowników z tabeli DaneSluzbowe, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <returns>Zwraca <see cref="T:System.Data.SqlClient.SqlDataReader"/> zawierający dane z tabeli DaneSluzbowe zalogowanego użytkownika</returns>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.DatabaseRead(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Wykonuje zapytanie <paramref name="cmd"/> na połączeniu <paramref name="conn"/>, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <param name="cmd">Obiekt <see cref="T:System.Data.SqlClient.SqlCommand"/> zawierający zapytanie</param>
+            <param name="conn">Obiekt <see cref="T:System.Data.SqlClient.SqlConnection"/> na którym zostanie wykonane połączenie z bazą</param>
+            <returns>Zwraca obiekt <see cref="T:System.Data.SqlClient.SqlDataReader"/> zawierający dane uzyskane z wykonania zapytania</returns>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.setUser(_19705_Zadanie_C_.Models.Pracownik)">
+            <summary>
+            Wykonuje UPDATE na rekodrdzie o ID zalogowanego użykownika w tabeli Pracownik na podstawie obiektu <see cref="T:_19705_Zadanie_C_.Models.Pracownik"/>, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <param name="pracownik">Obiekt <see cref="T:_19705_Zadanie_C_.Models.Pracownik"/> zawierający nowe dane rekordu</param>
+            <returns>Zwraca ilość zmodyfikowanych wierszy</returns>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.setAdres(_19705_Zadanie_C_.Models.Adres)">
+            <summary>
+            Wykonuje UPDATE na rekodrdzie o ID zalogowanego użykownika w tabeli Adres na podstawie obiektu <see cref="T:_19705_Zadanie_C_.Models.Adres"/>, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <param name="adres">Obiekt <see cref="T:_19705_Zadanie_C_.Models.Adres"/> zawierający nowe dane rekordu</param>
+            <returns>Zwraca ilość zmodyfikowanych wierszy</returns>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.setAdres(_19705_Zadanie_C_.Models.Adres,System.Int32)">
+            <summary>
+            Wykonuje UPDATE na rekodrdzie o dowolnym ID w tabeli Adres na podstawie obiektu <see cref="T:_19705_Zadanie_C_.Models.Adres"/>, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <param name="adres">Obiekt <see cref="T:_19705_Zadanie_C_.Models.Adres"/> zawierający nowe dane rekordu</param>
+            <param name="id"><see langword="int"/> wskazujący ID edytowanego rekordu</param>
+            <returns></returns>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.addAdres(_19705_Zadanie_C_.Models.Adres)">
+            <summary>
+            Wykonuje INSERT na rekodrdzie o ID zalogowanego użykownika w tabeli Adres na podstawie obiektu <see cref="T:_19705_Zadanie_C_.Models.Adres"/>, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <param name="adres">Obiekt <see cref="T:_19705_Zadanie_C_.Models.Adres"/> zawierający nowe dane rekordu</param>
+            <returns>Ilość dodanych wierszy</returns>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.setDane(_19705_Zadanie_C_.Models.Dane)">
+            <summary>
+            Wykonuje UPDATE na rekodrdzie o ID zalogowanego użytkownika w tabeli DaneSluzbowe na podstawie obiektu <see cref="T:_19705_Zadanie_C_.Models.Dane"/>, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <param name="dane">Obiekt <see cref="T:_19705_Zadanie_C_.Models.Dane"/> zawierający nowe dane rekordu</param>
+            <returns>Ilość dodanych wierszy</returns>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Database.deleteAdres(System.Nullable{System.Int64})">
+            <summary>
+            Wykonuje DELETE na rekodrdzie o dowolnym ID w tabeli Adres na podstawie obiektu parametru <paramref name="id"/>, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <param name="id"><see langword="long?"/>wskazujący ID rekordu do usunięcia</param>
+            <returns>Ilość usuniętych wierszy</returns>
+        </member>
+        <member name="T:_19705_Zadanie_C_.Models.Adres">
+            <summary>
+            Model reprezentujący tabelę Adres w bazie danych.
+            </summary>
+        </member>
+        <member name="T:_19705_Zadanie_C_.Models.Dane">
+            <summary>
+            Model reprezentujący tabelę DaneSluzbowe w bazie danych.
+            </summary>
+        </member>
+        <member name="T:_19705_Zadanie_C_.Models.Pracownik">
+            <summary>
+            Model reprezentujący tabelę Pracownik w bazie danych.
+            </summary>
+        </member>
+        <member name="T:_19705_Zadanie_C_.Pages.AdminModel">
+            <summary>
+            <see cref="T:Microsoft.AspNetCore.Mvc.RazorPages.PageModel"/> strony Admin, na której można wykonać operację CRUD na tabeli Adres
+            </summary>
+        </member>
+        <member name="F:_19705_Zadanie_C_.Pages.AdminModel.adres">
+            <summary>
+            przechowuje obiekt reprezentujący <see cref="T:_19705_Zadanie_C_.Models.Adres"/>
+            </summary>
+        </member>
+        <member name="F:_19705_Zadanie_C_.Pages.AdminModel.adresy">
+            <summary>
+            Lista obiektów <see cref="T:_19705_Zadanie_C_.Models.Adres"/> umożliwiająca edycję wielu rekordów naraz
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.AdminModel.OnGet">
+            <summary>
+            Wysyła do klienta obiekt zawierający wszystkie rekordy z tabeli Adres używając <see cref="M:_19705_Zadanie_C_.Database.getAdresy"/> przy zdarzeniu GET, wykorzystuje: <br/>
+             <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+             
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.AdminModel.OnPost">
+            <summary>
+            Wysyła do klienta obiekt zawierający wszystkie rekordy z tabeli Adres używając <see cref="M:_19705_Zadanie_C_.Database.getAdresy"/> przy zdarzeniu POST, wykorzystuje: <br/>
+             <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+             
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.AdminModel.OnPostEdit(System.Int32)">
+            <summary>
+            Przygotowuje obiekt <see cref="T:_19705_Zadanie_C_.Models.Adres"/> i używając <see cref="M:_19705_Zadanie_C_.Database.setAdres(_19705_Zadanie_C_.Models.Adres,System.Int32)"/> aktualizuje tabelę Adres, po czym
+            wysyła do klienta obiekt zawierający wszystkie rekordy z tabeli Adres, wykorzystuje: <br/>
+             <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+            </summary>
+            <param name="id">Parametr wskazujący ID wiersza z tabeli na stronie, z której zostanie utworzony obiekt <see cref="T:_19705_Zadanie_C_.Models.Adres"/></param>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.AdminModel.OnPostDelete(System.Int32)">
+            <summary>
+            Usuwa rekord z tabeli Adres używając <see cref="M:_19705_Zadanie_C_.Database.deleteAdres(System.Nullable{System.Int64})"/>, po czym
+            wysyła do klienta obiekt zawierający wszystkie rekordy z tabeli Adres, wykorzystuje: <br/>
+            <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+            </summary>
+            <param name="id">Parametr wskazujący ID wiersza z tabeli na stronie, z której zostanie utworzony obiekt <see cref="T:_19705_Zadanie_C_.Models.Adres"/></param>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.AdminModel.OnPostAdd(System.Int32)">
+            <summary>
+            Dodaje nowy rekord do tabeli Adres używając <see cref="M:_19705_Zadanie_C_.Database.addAdres(_19705_Zadanie_C_.Models.Adres)"/>, po czym
+            wysyła do klienta obiekt zawierający wszystkie rekordy z tabeli Adres, wykorzystuje: <br/>
+            <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+            </summary>
+            <param name="id">Parametr wskazujący ID wiersza z tabeli na stronie, z której zostanie utworzony obiekt <see cref="T:_19705_Zadanie_C_.Models.Adres"/></param>
+        </member>
+        <member name="T:_19705_Zadanie_C_.Pages.AdresModel">
+            <summary>
+            <see cref="T:Microsoft.AspNetCore.Mvc.RazorPages.PageModel"/> strony Adres, na której można wykonać operację Read oraz Update na tabeli Adres zalogowanego użytkownika
+            </summary>
+        </member>
+        <member name="F:_19705_Zadanie_C_.Pages.AdresModel.adres">
+            <summary>
+            przechowuje obiekt reprezentujący <see cref="T:_19705_Zadanie_C_.Models.Adres"/>
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.AdresModel.OnGet">
+            <summary>
+            Wysyła do klienta obiekt zawierający rekord o ID <see cref="F:_19705_Zadanie_C_.Użytkownik.userID"/> z tabeli Adres używając <see cref="M:_19705_Zadanie_C_.Database.getAdres"/> przy zdarzeniu GET, wykorzystuje: <br/>
+             <see cref="T:_19705_Zadanie_C_.Database"/> 
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+             
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.AdresModel.OnPost">
+            <summary>
+            Wysyła do klienta obiekt zawierający rekord o ID <see cref="F:_19705_Zadanie_C_.Użytkownik.userID"/> z tabeli Adres używając <see cref="M:_19705_Zadanie_C_.Database.getAdres"/> przy zdarzeniu POST, wykorzystuje: <br/>
+            <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+             
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.AdresModel.OnPostEdit">
+            <summary>
+            Przygotowuje obiekt <see cref="T:_19705_Zadanie_C_.Models.Adres"/> i używając <see cref="M:_19705_Zadanie_C_.Database.setAdres(_19705_Zadanie_C_.Models.Adres)"/> aktualizuje tabelę Adres, po czym
+            wysyła do klienta obiekt zawierający wszystkie rekordy z tabeli Adres, wykorzystuje: <br/>
+            <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+            </summary>
+        </member>
+        <member name="T:_19705_Zadanie_C_.Pages.DaneModel">
+            <summary>
+            <see cref="T:Microsoft.AspNetCore.Mvc.RazorPages.PageModel"/> strony DaneSluzbowe, na której można wykonać operację Read oraz Update na tabeli DaneSluzbowe zalogowanego użytkownika
+            </summary>
+        </member>
+        <member name="F:_19705_Zadanie_C_.Pages.DaneModel.dane">
+            <summary>
+            przechowuje obiekt reprezentujący <see cref="T:_19705_Zadanie_C_.Models.Dane"/>
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.DaneModel.OnGet">
+            <summary>
+            Wysyła do klienta obiekt zawierający rekord o ID <see cref="F:_19705_Zadanie_C_.Użytkownik.userID"/> z tabeli DaneSluzbowe używając <see cref="M:_19705_Zadanie_C_.Database.getDane"/> przy zdarzeniu GET, wykorzystuje: <br/>
+             <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+             
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.DaneModel.OnPost">
+            <summary>
+            Wysyła do klienta obiekt zawierający rekord o ID <see cref="F:_19705_Zadanie_C_.Użytkownik.userID"/> z tabeli DaneSluzbowe używając <see cref="M:_19705_Zadanie_C_.Database.getDane"/> przy zdarzeniu POST, wykorzystuje: <br/>
+             <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+             
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.DaneModel.OnPostEdit">
+            <summary>
+            Przygotowuje obiekt <see cref="T:_19705_Zadanie_C_.Models.Dane"/> i używając <see cref="M:_19705_Zadanie_C_.Database.setDane(_19705_Zadanie_C_.Models.Dane)"/> aktualizuje tabelę DaneSluzbowe, po czym
+            wysyła do klienta obiekt zawierający wszystkie rekordy z tabeli DaneSluzbowe, wykorzystuje: <br/>
+            <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+            </summary>
+        </member>
+        <member name="T:_19705_Zadanie_C_.Pages.LoginModel">
+            <summary>
+            <see cref="T:Microsoft.AspNetCore.Mvc.RazorPages.PageModel"/> strony Login, która obsługuje logowanie użytkowników używając <see cref="T:_19705_Zadanie_C_.Użytkownik"/>
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.LoginModel.OnGetDelete">
+            <summary>
+            W momencie wywołania zdarzenia OnGetDelete wyświetla komunikat i wylogowywuje użytkownika czyszcząc dane za pomocą <see cref="M:Microsoft.AspNetCore.Http.ISession.Clear"/>
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.LoginModel.OnPost">
+            <summary>
+            Wywołuje <see cref="M:_19705_Zadanie_C_.Użytkownik.Login(System.String,System.String)"/> używając danych pobranych z formularza na stronie Login i w zależności od zwróconej wartości:<br/>
+            0- Wysyła komunikat że użytkownik nie istnieje <br/>
+            1- Wysyła komunikat że użytkownik jest nieaktywny<br/>
+            2- Ustawia za pomocą <see cref="M:Microsoft.AspNetCore.Http.SessionExtensions.SetString(Microsoft.AspNetCore.Http.ISession,System.String,System.String)"/>  klucz username i przekierowuje na stronę Pracownik
+            </summary>
+        </member>
+        <member name="T:_19705_Zadanie_C_.Pages.PracownikModel">
+            <summary>
+            <see cref="T:Microsoft.AspNetCore.Mvc.RazorPages.PageModel"/> strony Pracownik, na której można wykonać operację Read oraz Update na tabeli Pracownik zalogowanego użytkownika
+            </summary>
+        </member>
+        <member name="F:_19705_Zadanie_C_.Pages.PracownikModel.pracowniks">
+            <summary>
+            przechowuje obiekt reprezentujący <see cref="T:_19705_Zadanie_C_.Models.Pracownik"/>
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.PracownikModel.OnGet">
+            <summary>
+            Wysyła do klienta obiekt zawierający rekord o ID <see cref="F:_19705_Zadanie_C_.Użytkownik.userID"/> z tabeli Pracownik używając <see cref="M:_19705_Zadanie_C_.Database.getUser"/> przy zdarzeniu GET, wykorzystuje: <br/>
+             <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+             
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.PracownikModel.OnPost">
+            <summary>
+            Wysyła do klienta obiekt zawierający rekord o ID <see cref="F:_19705_Zadanie_C_.Użytkownik.userID"/> z tabeli Pracownik używając <see cref="M:_19705_Zadanie_C_.Database.getUser"/> przy zdarzeniu POST, wykorzystuje: <br/>
+             <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+             
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Pages.PracownikModel.OnPostEdit">
+            <summary>
+            Przygotowuje obiekt <see cref="T:_19705_Zadanie_C_.Models.Pracownik"/> i używając <see cref="M:_19705_Zadanie_C_.Database.setUser(_19705_Zadanie_C_.Models.Pracownik)"/> aktualizuje tabelę Pracownik, po czym
+            wysyła do klienta obiekt zawierający wszystkie rekordy z tabeli DaneSluzbowe, wykorzystuje: <br/>
+            <see cref="T:_19705_Zadanie_C_.Database"/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+             <see cref="T:System.Collections.Generic.List`1" />
+            </summary>
+        </member>
+        <member name="T:_19705_Zadanie_C_.Użytkownik">
+            <summary>
+            Reprezentuje zalogowanego użytkownika oraz obsługuje logowanie i wylogowywanie, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+        </member>
+        <member name="F:_19705_Zadanie_C_.Użytkownik.userID">
+            <summary>
+            ID zalogowanego użytkownika
+            </summary>
+        </member>
+        <member name="M:_19705_Zadanie_C_.Użytkownik.Login(System.String,System.String)">
+            <summary>
+            Sprawdza, czy w bazie danych istnieje użytkownik o zadanym <paramref name="username"/> i <paramref name="password"/>, wykorzystuje: <br/>
+             <see cref="T:System.Data.SqlClient.SqlDataReader"/><br/>
+             <see cref="T:System.Data.SqlClient.SqlConnection"/> <br/>
+             <see cref="T:System.Data.SqlClient.SqlCommand"/><br/>
+            </summary>
+            <param name="username">Zawiera nazwę użytkownika, porównywaną z polem Login w bazie</param>
+            <param name="password">Zawiera hasło użytkownika, porównywaną z polem Password w bazie</param>
+            <returns>Zwraca <see langword="int"/>:<br/>
+             0 - parametry nie zgadzają się z żadnym użytkownikiem <br/>
+             1 - użytkownik istnieje, ale pole status jest ustawione na 0 (nieaktywny)<br/>
+             2 - pomyślnie zalogowano
+            </returns>
+        </member>
+    </members>
+</doc>
